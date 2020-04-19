@@ -1,3 +1,5 @@
+package com.DesenvSoft;
+
 public class ContaMagica {
     
     public static final int SILVER = 0;
