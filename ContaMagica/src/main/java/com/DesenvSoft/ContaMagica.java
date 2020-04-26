@@ -48,7 +48,7 @@ public class ContaMagica {
         }
 
        else if(this.getStatus() == 2){
-            this.saldo = this.saldo + (valor * 2.5);
+            this.saldo = this.saldo + (valor * 1.025);
         }
 
     }
