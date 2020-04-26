@@ -26,3 +26,7 @@ Após a execução da segunda bateria de testes a cobertura subiu para 82% das i
 As linhas que permaneceram sem cobertura foram as que envolviam o lançamento das exceções (como previsto) e as mesmas condições de combinações de estado e valor de saldo final que já haviam sido observadas anteriormente.
 
 Observamos que o conteúdo da primeira execução do CodeCoverage não foi incluso no controle de versão. Então optou-se por incluir a partir deste momento
+
+Na nova bateria de testes incluímos testes para depósitos realizados com a conta no status Platinum, que ainda não estava previsto nos demais testes. Percebemos um erro na regra e foi corrigido.
+
+A bateria seguinte chegou a 86% de cobertura de instruções e 62% dos caminhos de condição. As linhas faltantes ainda são as referentes aos casos que gerariam exceção e as que gerariam redução de categoria
