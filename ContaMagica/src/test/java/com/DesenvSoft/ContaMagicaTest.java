@@ -54,14 +54,14 @@ public class ContaMagicaTest{
       Assertions.assertEquals(1, result) ;
     }
 
-    @Test
-    public void status21Exagero() throws InvalidOperException {
-        cm.deposito(100000);
-        cm.deposito(100000);
-        cm.retirada(105000000);
-        double result = cm.getStatus();
-      Assertions.assertEquals(2, result) ;
-    }
+    //@Test
+    //public void status21Exagero() throws InvalidOperException {
+    //    cm.deposito(100000);
+    //    cm.deposito(100000);
+    //    cm.retirada(105000000);
+    //    double result = cm.getStatus();
+    //  Assertions.assertEquals(2, result) ;
+    //}
 
     //@Test
     //public void status10Exagero() throws InvalidOperException {
