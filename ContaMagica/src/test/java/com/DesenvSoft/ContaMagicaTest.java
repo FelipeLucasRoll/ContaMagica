@@ -61,7 +61,7 @@ public class ContaMagicaTest{
         cm.deposito(100000);
         cm.deposito(100);
         double result = cm.getSaldo();
-      Assertions.assertEquals(200102.5, result) ;
+      Assertions.assertEquals(201102.5, result) ;
     }
 
     //@Test
