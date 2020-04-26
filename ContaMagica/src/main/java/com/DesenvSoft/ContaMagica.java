@@ -24,8 +24,12 @@ public class ContaMagica {
           
      }
 
- public void deposito(int valor) /*throws INVALID_OPER_EXCEPTION*/
+ public void deposito(int valor) throws InvalidOperException
      {
+
+        if(valor <=0 ){
+            throw new InvalidOperException("Esta operação requer um valor maior ou igual a zero");
+        }
 
         if(this.getStatus() == 0){
 
@@ -51,7 +55,11 @@ public class ContaMagica {
 
 
 
-public void retirada(int valor) /*throws INVALID_OPER_EXCEPTION*/{
+public void retirada(int valor) throws InvalidOperException{
+
+    if(valor <=0 ){
+        throw new InvalidOperException("Esta operação requer um valor maior ou igual a zero");
+    }
 
         if(this.getStatus() == 0){
             this.saldo = this.saldo - valor;
