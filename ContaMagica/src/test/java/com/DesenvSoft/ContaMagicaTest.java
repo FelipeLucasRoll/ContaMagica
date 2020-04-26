@@ -54,6 +54,16 @@ public class ContaMagicaTest{
       Assertions.assertEquals(1, result) ;
     }
 
+
+    @Test
+    public void status2() throws InvalidOperException {
+        cm.deposito(100000);
+        cm.deposito(100000);
+        cm.deposito(100);
+        double result = cm.getSaldo();
+      Assertions.assertEquals(200102.5, result) ;
+    }
+
     //@Test
     //public void status21Exagero() throws InvalidOperException {
     //    cm.deposito(100000);
