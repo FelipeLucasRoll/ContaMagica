@@ -18,3 +18,5 @@ Observou-se que as linhas não cobertas derivavam do fato de que nos casos de te
 Observando o código inicial se identificou a possibilidade de eliminar verificações de condição redundantes reordenando o código nos métodos. Neste momento foi também criado o mecanismo de lançamento das exceções mencionadas anteriormente. A reordenação do código diminuiu o número de linhas, facilitando a leitura e reduzindo a quantidade a ser coberta nos testes seguintes.
 
 Com a implementação do lançamento das exceções, foi modificado o comportamento da classe para as situações que gerariam saldo negativo. Antes ela zerava o valor do saldo nessas condições e concluia a operação, e agora passou a reverter ao estado inicial pré-operação e lançar exceção. O caso de teste criado para o comportamento inicial deve então ser substituído.
+
+Neste segundo momento modificamos os casos de teste para lançar a exceção um nível acima ao invés de tratá-la, para permitir a execução da segunda bateria com dados válidos sem nos preocuparmos ainda com os testes das exceções.
