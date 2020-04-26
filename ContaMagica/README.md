@@ -20,3 +20,9 @@ Observando o código inicial se identificou a possibilidade de eliminar verifica
 Com a implementação do lançamento das exceções, foi modificado o comportamento da classe para as situações que gerariam saldo negativo. Antes ela zerava o valor do saldo nessas condições e concluia a operação, e agora passou a reverter ao estado inicial pré-operação e lançar exceção. Os casos de teste criados para o comportamento inicial devem então ser substituídos e os demais readequados para compreender a reversão ao estado inicial na retirada de valores que tornariam saldo negativo. 
 
 Neste segundo momento modificamos os casos de teste para lançar a exceção um nível acima ao invés de tratá-la, para permitir a execução da segunda bateria com dados válidos sem nos preocuparmos ainda com os testes das exceções.
+
+Após a execução da segunda bateria de testes a cobertura subiu para 82% das instruções e 58% dos branches, o que era previsíve visto que o número de branches de condição diminuiu em função da reorganização do código
+
+As linhas que permaneceram sem cobertura foram as que envolviam o lançamento das exceções (como previsto) e as mesmas condições de combinações de estado e valor de saldo final que já haviam sido observadas anteriormente.
+
+Observamos que o conteúdo da primeira execução do CodeCoverage não foi incluso no controle de versão. Então optou-se por incluir a partir deste momento
