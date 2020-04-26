@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.DesenvSoft.ContaMagicaTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.07 s <<< FAILURE! - in com.DesenvSoft.ContaMagicaTest
-status2  Time elapsed: 0.046 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <200102.5> but was: <201102.5>
-	at com.DesenvSoft.ContaMagicaTest.status2(ContaMagicaTest.java:64)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 s - in com.DesenvSoft.ContaMagicaTest

@@ -39,7 +39,7 @@ public class ContaMagica {
                 }
 <span class="fc" id="L40">        }</span>
 
-<span class="pc bpc" id="L42" title="1 of 2 branches missed.">       else if(this.getStatus() == 1){</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">       else if(this.getStatus() == 1){</span>
 
 <span class="fc" id="L44">            this.saldo = this.saldo + (valor * 1.01);</span>
 <span class="pc bpc" id="L45" title="1 of 2 branches missed.">            if(this.saldo &gt;= 200000){</span>
@@ -47,8 +47,8 @@ public class ContaMagica {
              }
 <span class="fc" id="L48">        }</span>
 
-<span class="nc bnc" id="L50" title="All 2 branches missed.">       else if(this.getStatus() == 2){</span>
-<span class="nc" id="L51">            this.saldo = this.saldo + (valor * 2.5);</span>
+<span class="pc bpc" id="L50" title="1 of 2 branches missed.">       else if(this.getStatus() == 2){</span>
+<span class="fc" id="L51">            this.saldo = this.saldo + (valor * 1.025);</span>
         }
 
 <span class="fc" id="L54">    }</span>
@@ -62,9 +62,9 @@ public void retirada(int valor) throws InvalidOperException{
     }
 <span class="fc" id="L63">        double saldoInicial = this.saldo;</span>
 <span class="fc" id="L64">        this.saldo = this.saldo - valor;</span>
-<span class="fc bfc" id="L65" title="All 2 branches covered.">        if(this.saldo &lt; 0){</span>
-<span class="fc" id="L66">            this.saldo = saldoInicial;</span>
-<span class="fc" id="L67">            throw new InvalidOperException(&quot;Esta operação resultaria em saldo inferior a zero e foi abortada. Nenhuma modificação foi realizada&quot;);</span>
+<span class="pc bpc" id="L65" title="1 of 2 branches missed.">        if(this.saldo &lt; 0){</span>
+<span class="nc" id="L66">            this.saldo = saldoInicial;</span>
+<span class="nc" id="L67">            throw new InvalidOperException(&quot;Esta operação resultaria em saldo inferior a zero e foi abortada. Nenhuma modificação foi realizada&quot;);</span>
         }
 
 <span class="fc bfc" id="L70" title="All 2 branches covered.">        if(this.getStatus() == 1){</span>
