@@ -42,7 +42,7 @@ public class ContaMagicaTest{
         cm.deposito(50000);
         cm.deposito(150000);
         double result = cm.getSaldo();
-      Assertions.assertEquals(200000, result) ;
+      Assertions.assertEquals(201500, result) ;
     }
 
     @Test
