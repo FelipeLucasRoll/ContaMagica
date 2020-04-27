@@ -27,8 +27,8 @@ public class ContaMagica {
  public void deposito(int valor) throws InvalidOperException
      {
 
-<span class="pc bpc" id="L30" title="1 of 2 branches missed.">        if(valor &lt;=0 ){</span>
-<span class="nc" id="L31">            throw new InvalidOperException(&quot;Esta operação requer um valor maior ou igual a zero&quot;);</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if(valor &lt;=0 ){</span>
+<span class="fc" id="L31">            throw new InvalidOperException(&quot;Esta operação requer um valor maior ou igual a zero&quot;);</span>
         }
 
 <span class="fc bfc" id="L34" title="All 2 branches covered.">        if(this.getStatus() == 0){</span>
@@ -57,14 +57,14 @@ public class ContaMagica {
 
 public void retirada(int valor) throws InvalidOperException{
 
-<span class="pc bpc" id="L60" title="1 of 2 branches missed.">    if(valor &lt;=0 ){</span>
-<span class="nc" id="L61">        throw new InvalidOperException(&quot;Esta operação requer um valor maior ou igual a zero&quot;);</span>
+<span class="fc bfc" id="L60" title="All 2 branches covered.">    if(valor &lt;=0 ){</span>
+<span class="fc" id="L61">        throw new InvalidOperException(&quot;Esta operação requer um valor maior ou igual a zero&quot;);</span>
     }
 <span class="fc" id="L63">        double saldoInicial = this.saldo;</span>
 <span class="fc" id="L64">        this.saldo = this.saldo - valor;</span>
-<span class="pc bpc" id="L65" title="1 of 2 branches missed.">        if(this.saldo &lt; 0){</span>
-<span class="nc" id="L66">            this.saldo = saldoInicial;</span>
-<span class="nc" id="L67">            throw new InvalidOperException(&quot;Esta operação resultaria em saldo inferior a zero e foi abortada. Nenhuma modificação foi realizada&quot;);</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        if(this.saldo &lt; 0){</span>
+<span class="fc" id="L66">            this.saldo = saldoInicial;</span>
+<span class="fc" id="L67">            throw new InvalidOperException(&quot;Esta operação resultaria em saldo inferior a zero e foi abortada. Nenhuma modificação foi realizada&quot;);</span>
         }
 
 <span class="fc bfc" id="L70" title="All 2 branches covered.">        if(this.getStatus() == 1){</span>
