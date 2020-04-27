@@ -83,6 +83,7 @@ public class ContaMagicaTest{
     //}
     
 
+
     @Test
     public void status10() throws InvalidOperException {
         cm.deposito(100000);
@@ -91,4 +92,26 @@ public class ContaMagicaTest{
       Assertions.assertEquals(0, result) ;
     }
 
-}
+    @Test
+    void testException1() {
+      Assertions.assertThrows(InvalidOperException.class, () -> {cm.deposito(-100);
+    });
+ 
+    }
+
+    @Test
+    void testException2() {
+      Assertions.assertThrows(InvalidOperException.class, () -> {cm.retirada(-100);;
+    });
+
+    }
+
+
+    @Test
+    void testException3() {
+      Assertions.assertThrows(InvalidOperException.class, () -> {cm.retirada(100);
+    });
+
+    }
+
+    }
