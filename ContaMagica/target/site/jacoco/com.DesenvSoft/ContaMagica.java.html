@@ -47,9 +47,9 @@ public class ContaMagica {
              }
 <span class="fc" id="L48">        }</span>
 
-<span class="pc bpc" id="L50" title="1 of 2 branches missed.">       else if(this.getStatus() == 2){</span>
+       else 
 <span class="fc" id="L51">            this.saldo = this.saldo + (valor * 1.025);</span>
-        }
+        
 
 <span class="fc" id="L54">    }</span>
 
@@ -73,11 +73,11 @@ public void retirada(int valor) throws InvalidOperException{
             }
 <span class="fc" id="L74">        }</span>
 
-<span class="pc bpc" id="L76" title="1 of 2 branches missed.">        else if(this.getStatus() == 2){</span>
+        else 
 <span class="fc bfc" id="L77" title="All 2 branches covered.">            if(this.saldo &lt; 100000 ){</span>
 <span class="fc" id="L78">                this.status = 1;</span>
             }
-         }
+         
 <span class="fc" id="L81">}</span>
 
 }
