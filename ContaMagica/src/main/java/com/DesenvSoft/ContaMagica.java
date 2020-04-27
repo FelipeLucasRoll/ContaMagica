@@ -47,9 +47,9 @@ public class ContaMagica {
              }
         }
 
-       else if(this.getStatus() == 2){
+       else 
             this.saldo = this.saldo + (valor * 1.025);
-        }
+        
 
     }
 
@@ -73,11 +73,11 @@ public void retirada(int valor) throws InvalidOperException{
             }
         }
 
-        else if(this.getStatus() == 2){
+        else 
             if(this.saldo < 100000 ){
                 this.status = 1;
             }
-         }
+         
 }
 
 }
