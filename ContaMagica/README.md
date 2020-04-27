@@ -33,3 +33,8 @@ A bateria seguinte chegou a 86% de cobertura de instruções e 62% dos caminhos 
 
 Implementamos os casos de teste para o lançamento de exceções e executamos nova bateria
 Resultado de 100% de cobertura de instruções e 75% de branches
+
+Após a inclusão dos casos para testar as demais branches chegamos a 100% de cobertura de instruções e 91% de cobertura de branches.
+Com isso percebemos que as branches nao cobertas terminaram de tal forma pois pela lógica dos estados possíveis seria desnecessário validar a última categoria de conta quando todas as demais já foram validadas e não enquadravam. Este teste necessariamente sempre daria verdadeiro, por eliminação.
+
+Optou-se então por remover a verificação desnecessária nessas linhas.
