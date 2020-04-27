@@ -30,3 +30,6 @@ Observamos que o conteúdo da primeira execução do CodeCoverage não foi inclu
 Na nova bateria de testes incluímos testes para depósitos realizados com a conta no status Platinum, que ainda não estava previsto nos demais testes. Percebemos um erro na regra e foi corrigido.
 
 A bateria seguinte chegou a 86% de cobertura de instruções e 62% dos caminhos de condição. As linhas faltantes ainda são as referentes aos casos que gerariam exceção e as que gerariam redução de categoria
+
+Implementamos os casos de teste para o lançamento de exceções e executamos nova bateria
+Resultado de 100% de cobertura de instruções e 75% de branches
