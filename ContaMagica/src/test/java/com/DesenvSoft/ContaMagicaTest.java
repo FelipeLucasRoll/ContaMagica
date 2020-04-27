@@ -88,7 +88,7 @@ public class ContaMagicaTest{
     public void status21False() throws InvalidOperException {
         cm.deposito(100000);
         cm.deposito(100000);
-        cm.retirada(100000);
+        cm.retirada(50000);
         double result = cm.getStatus();
       Assertions.assertEquals(2, result) ;
     }
@@ -134,7 +134,7 @@ public class ContaMagicaTest{
 	@Test
     public void status10False() throws InvalidOperException {
         cm.deposito(100000);
-        cm.retirada(75000);
+        cm.retirada(20000);
         double result = cm.getStatus();
       Assertions.assertEquals(1, result) ;
     }
