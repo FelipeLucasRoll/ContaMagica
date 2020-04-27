@@ -62,7 +62,7 @@ public class ContaMagicaTest{
 	@Test
     public void status12False() throws InvalidOperException {
         cm.deposito(50000);
-        cm.deposito(149999);
+        cm.deposito(149499);
         double result = cm.getStatus();
       Assertions.assertEquals(1, result) ;
     }
