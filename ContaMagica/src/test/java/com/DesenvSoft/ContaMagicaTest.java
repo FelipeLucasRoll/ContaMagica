@@ -28,6 +28,20 @@ public class ContaMagicaTest{
     //    double result = cm.getStatus();
     //  Assertions.assertEquals(1, result) ;
     //}
+	
+	@Test
+    public void status01v2() throws InvalidOperException {
+        cm.deposito(50001);
+        double result = cm.getStatus();
+      Assertions.assertEquals(1, result) ;
+    }
+	
+	@Test
+    public void status01False() throws InvalidOperException {
+        cm.deposito(49999);
+        double result = cm.getStatus();
+      Assertions.assertEquals(0, result) ;
+    }
 
     @Test
     public void status12() throws InvalidOperException {
@@ -35,6 +49,22 @@ public class ContaMagicaTest{
         cm.deposito(150000);
         double result = cm.getStatus();
       Assertions.assertEquals(2, result) ;
+    }
+	
+	@Test
+    public void status12v2() throws InvalidOperException {
+        cm.deposito(50000);
+        cm.deposito(150001);
+        double result = cm.getStatus();
+      Assertions.assertEquals(2, result) ;
+    }
+	
+	@Test
+    public void status12False() throws InvalidOperException {
+        cm.deposito(50000);
+        cm.deposito(149999);
+        double result = cm.getStatus();
+      Assertions.assertEquals(1, result) ;
     }
 
     @Test
@@ -52,6 +82,15 @@ public class ContaMagicaTest{
         cm.retirada(105000);
         double result = cm.getStatus();
       Assertions.assertEquals(1, result) ;
+    }
+	
+	@Test
+    public void status21False() throws InvalidOperException {
+        cm.deposito(100000);
+        cm.deposito(100000);
+        cm.retirada(100000);
+        double result = cm.getStatus();
+      Assertions.assertEquals(2, result) ;
     }
 
 
@@ -91,6 +130,14 @@ public class ContaMagicaTest{
         double result = cm.getStatus();
       Assertions.assertEquals(0, result) ;
     }
+	
+	@Test
+    public void status10False() throws InvalidOperException {
+        cm.deposito(100000);
+        cm.retirada(75000);
+        double result = cm.getStatus();
+      Assertions.assertEquals(1, result) ;
+    }
 
     @Test
     void testException1() {
@@ -113,5 +160,4 @@ public class ContaMagicaTest{
     });
 
     }
-
     }
